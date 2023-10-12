@@ -1,6 +1,22 @@
-function AllMovies() {
+import Card from '../Card/Card';
+import './AllMovies.css';
+
+function AllMovies({ allMovies }) {
+  const movieCards = allMovies.map(movie => {
+    return (
+    <Card 
+    id={movie.id}
+    key={movie.id}
+    poster_path={movie.poster_path}
+    title={movie.title}
+    average_rating={movie.average_rating}
+    />
+    )
+  })
   return (
-    <h1>All Movies</h1>
+    <div className='all-movies-container'>
+      {movieCards}
+    </div>
   )
 }
 
