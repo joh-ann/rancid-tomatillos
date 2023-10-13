@@ -1,0 +1,34 @@
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #ffffff;
+  background-color: black;
+}
+
+.page-title {
+  height: 100px;
+  width: 40vw;
+  font-family: 'Russo One', sans-serif;
+  padding: 10px 0px 5px 10px;
+  margin: 20px 0px 5px 20px;
+  font-size: 50px;
+  color: #ffffff;
+  background-color: black;
+}
+
+.page-header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 50px;
+  background-color: black;
+  color: #ffffff;
+}
+
+.page-header-btn:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
