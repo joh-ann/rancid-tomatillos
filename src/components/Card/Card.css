@@ -45,7 +45,8 @@
 }
 
 .card-title {
-  font-size: 1.2em;
+  font-size: 1.15em;
+  padding: 0px 8px 2px 8px;
 }
 
 .card-year {
