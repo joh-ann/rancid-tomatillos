@@ -51,6 +51,18 @@
   color: #808080;
 }
 
+.card-rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  margin: 5px;
+  padding: 10px;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .card {
     width: 40%;
