@@ -20,10 +20,12 @@ function App() {
   console.log('state', focusMovie);
 
   return (
-    <main className="App">
+    <main className='app'>
       <Header />
-      <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
-      <FocusMovie focusMovie={focusMovie} />
+      <div className='app-content-container'>
+        <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
+        <FocusMovie focusMovie={focusMovie} />
+      </div>
       {/* //if modal keep here set new state: const [isOpen setisOpen] = useState(false)? isOpen && render focusMovie Modal otherwise null->  If as a link, the link would be  */}
       <Footer />
     </main>

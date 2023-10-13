@@ -9,13 +9,15 @@ function Card({
   showFocusMovie,
 }) {
   return (
-    <div className="card">
-      <img src={poster_path} className="movie-card-img" />
-      <h2>{title}</h2>
-      <p>{average_rating.toFixed(2)}</p>
+    <button className='card' onClick={() => showFocusMovie(id)}>
+      <img src={poster_path} className='movie-card-img'/>
+      <div className='card-description'>
+        <h2 className='card-title'>{title}</h2>
+        <p className='card-year'>{release_date}</p>
+      </div>
       {/* <p>{release_date}</p> */}
-      <button onClick={() => showFocusMovie(id)}>Show Movie Details</button>
-    </div>
+      {/* <button onClick={() => showFocusMovie(id)}>Show Movie Details</button> */}
+    </button>
   );
 }
 
