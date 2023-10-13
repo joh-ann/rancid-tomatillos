@@ -4,8 +4,7 @@
   align-items: center;
   box-sizing: border-box;
   border: none;
-  height: 100%;
-  width: 100%;
+  width: 18%;
   position: relative; 
   border-radius: 10px;
   overflow: auto;
@@ -18,8 +17,6 @@
 }
 
 .movie-card-img {
-  /* position: relative; */
-  height: 100%;
   width: 100%;
 }
 
@@ -55,7 +52,11 @@
 }
 
 @media (max-width: 768px) {
+  .card {
+    width: 40%;
+  }
+
   .card-description {
-    font-size: 0.8em; /* Adjust the font size for smaller screens */
+    font-size: 0.8em;
   }
 }
