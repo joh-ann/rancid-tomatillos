@@ -6,10 +6,10 @@
   border: none;
   height: 100%;
   width: 100%;
-  position: relative;
-  overflow: hidden;
+  position: relative; 
   border-radius: 10px;
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+  overflow: auto;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 .card:hover {
@@ -18,15 +18,14 @@
 }
 
 .movie-card-img {
-  display: flex;
-  position: relative;
+  /* position: relative; */
   height: 100%;
   width: 100%;
 }
 
 .card:hover .movie-card-img {
   filter: brightness(50%);
-  transform: scale(1.15);
+  transform: scale(1.1);
   transition: transform 0.2s ease;
 }
 
@@ -37,7 +36,7 @@
 .card-description {
   display: flex;
   position: relative;
-  justify-content: center;
+  text-align: center;
   flex-direction: column;
   background-color: black;
   color: #FFFFFF;

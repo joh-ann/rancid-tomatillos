@@ -9,7 +9,7 @@ function Card({
   showFocusMovie,
 }) {
   return (
-    <button className='card' onClick={() => showFocusMovie(id)}>
+    <div className='card' onClick={() => showFocusMovie(id)}>
       <img src={poster_path} className='movie-card-img'/>
       <div className='card-description'>
         <h2 className='card-title'>{title}</h2>
@@ -17,7 +17,7 @@ function Card({
       </div>
       {/* <p>{release_date}</p> */}
       {/* <button onClick={() => showFocusMovie(id)}>Show Movie Details</button> */}
-    </button>
+    </div>
   );
 }
 
