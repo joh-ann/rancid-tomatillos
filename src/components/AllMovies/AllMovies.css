@@ -1,7 +1,9 @@
 .all-movies-container {
-  /* background-color: #000000; */
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 15px;
-  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* grid-template-columns: repeat(5, 1fr); */
+  gap: 15px;
+  max-width: 80%;
 }
