@@ -1,14 +1,12 @@
 import './App.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
-import movieData from '../../movieData';
 
 // modal
 const customStyles = {
@@ -24,21 +22,51 @@ const customStyles = {
     overflow: 'hidden',
     transform: 'translate(-50%, -50%)',
     backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
   },
   overlay: {
-    background: 'rgba(0, 0, 0, 0.5)'
-  }
+    background: 'rgba(0, 0, 0, 0.5)',
+  },
 };
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
 
 function App() {
-  const [allMovies, setMovies] = useState(movieData.movies);
+  const [allMovies, setMovies] = useState([]);
   const [focusMovie, setFocusMovie] = useState([]);
   // modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [error, setError] = useState('');
+
+  function getAllMovies() {
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+      .then(response => {
+        if (!response.ok) {
+          console.log(`Error code: ${response.status}`);
+          throw new Error(`Sorry the Movies are not available`);
+        } else {
+          return response.json();
+        }
+      })
+      .then(data => {
+        setMovies([...allMovies, ...data.movies]);
+      })
+      .catch(error => setError(error.message));
+  }
+
+  useEffect(() => {
+    console.log('effect ran');
+    getAllMovies();
+  }, []);
+
+  function errorMessage(message) {
+    return (
+      <div>
+        <p className="error-message">{error}</p>
+      </div>
+    );
+  }
 
   function openModal() {
     setIsOpen(true);
@@ -53,20 +81,30 @@ function App() {
   }
 
   function showFocusMovie(id) {
-    const clickedMovie = allMovies.filter(movie => {
-      return movie.id === id;
-    });
-    setFocusMovie(clickedMovie);
-    openModal();
-    return clickedMovie;
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error code: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        setFocusMovie([data.movie]);
+        openModal();
+      })
+      .catch(error => console.log(error));
   }
   console.log('state', focusMovie);
 
   return (
-    <main className='app'>
+    <main className="app">
       <Header />
-      <div className='app-content-container'>
-        <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
+      <div className="app-content-container">
+        {error.length ? (
+          errorMessage()
+        ) : (
+          <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
+        )}
       </div>
       <Footer />
       <Modal
@@ -75,11 +113,16 @@ function App() {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Selected Movie Modal"
-        >
-        <FocusMovie focusMovie={focusMovie} customStyles={customStyles}/>
-        <button className='close-modal-btn' onClick={closeModal}>×</button>
+      >
+        <FocusMovie
+          focusMovie={focusMovie}
+          customStyles={customStyles}
+          key={focusMovie.id}
+        />
+        <button className="close-modal-btn" onClick={closeModal}>
+          ×
+        </button>
       </Modal>
-
     </main>
   );
 }

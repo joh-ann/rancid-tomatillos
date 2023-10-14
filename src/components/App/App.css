@@ -31,5 +31,10 @@
 .close-modal-btn:hover {
   cursor: pointer;
   transform: scale(1.1);
-  background-color: #FF0000;
+  background-color: #ff0000;
+}
+
+.error-message {
+  color: #ffffff;
+  font-size: 24px;
 }
