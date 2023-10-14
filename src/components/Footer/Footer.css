@@ -5,7 +5,7 @@
   height: 100px;
   width: 75vw;
   padding: 10px 0px 5px 10px;
-  margin: 20px 0px 5px 45px;
+  margin: 10px 10px 5px 45px;
   font-size: 25px;
   color: #ffffff;
   background-color: #030e17;
@@ -28,11 +28,20 @@
 
 .project-details {
   font-family: 'Russo One', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .linkedin,
 .github {
   display: flex;
   flex-direction: column;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  font-size: 12px;
+  text-decoration: none;
+  color: inherit;
 }
