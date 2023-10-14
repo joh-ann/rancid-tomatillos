@@ -76,8 +76,8 @@ function App() {
         style={customStyles}
         contentLabel="Selected Movie Modal"
         >
-        <button className='close-modal-btn' onClick={closeModal}>Close</button>
         <FocusMovie focusMovie={focusMovie} customStyles={customStyles}/>
+        <button className='close-modal-btn' onClick={closeModal}>×</button>
       </Modal>
 
     </main>
