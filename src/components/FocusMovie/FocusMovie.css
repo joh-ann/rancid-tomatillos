@@ -1,21 +1,27 @@
-.modal {
-  /* display: flex; */
-  /* justify-content: center; */
+.selected-movie {
+  display: flex;
+  max-height: 80vh;
+}
+
+.selected-movie-container {
+  display: flex;
 }
 
 .selected-movie-img {
-  min-width: 200px;
-  min-height: 100%;
-  max-width: 20%;
-  height: auto;
+  height: 100%;
+  width: 30%;
+  max-width: 40%;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
   margin-bottom: 10px;
 }
 
-.selected-movie-info {
+.selected-movie-header {
+  display: flex;
+  flex-direction: column;
   color: #FFFFFF;
+  height: 100%;
   background-color: black;
-  max-width: fit-content;
+  max-width: 20vw;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
