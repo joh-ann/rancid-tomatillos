@@ -17,8 +17,8 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     border: 'none',
-    height: '80vh',
-    width: '80vw',
+    height: '80%',
+    width: '80%',
     overflow: 'hidden',
     transform: 'translate(-50%, -50%)',
     backgroundSize: 'cover',
@@ -35,6 +35,7 @@ Modal.setAppElement('#root');
 function App() {
   const [allMovies, setMovies] = useState([]);
   const [focusMovie, setFocusMovie] = useState([]);
+  const [trailerKey, setTrailerKey] = useState('');
   // modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [error, setError] = useState('');
@@ -90,11 +91,27 @@ function App() {
       })
       .then(data => {
         setFocusMovie([data.movie]);
+        getMovieTrailer(id);
         openModal();
       })
       .catch(error => console.log(error));
   }
   console.log('state', focusMovie);
+
+  function getMovieTrailer(id) {
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error code: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        const foundTrailer = data.videos.find(el => el.type === 'Trailer').key
+        setTrailerKey(foundTrailer);
+      })
+      .catch(error => console.log(error));
+  }
 
   return (
     <main className="app">
@@ -118,6 +135,7 @@ function App() {
           focusMovie={focusMovie}
           customStyles={customStyles}
           key={focusMovie.id}
+          trailerKey={trailerKey}
         />
         <button className="close-modal-btn" onClick={closeModal}>
           ×
