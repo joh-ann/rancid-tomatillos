@@ -1,5 +1,6 @@
 import Card from '../Card/Card';
 import './AllMovies.css';
+import PropTypes from 'prop-types';
 
 function AllMovies({ allMovies, showFocusMovie }) {
   const movieCards = allMovies.map(movie => {
@@ -21,3 +22,8 @@ function AllMovies({ allMovies, showFocusMovie }) {
 }
 
 export default AllMovies;
+
+AllMovies.propTypes = {
+  allMovies: PropTypes.array,
+  showFocusMovie: PropTypes.func,
+};
