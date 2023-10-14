@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react';
 import Modal from 'react-modal';
+import PropTypes from 'prop-types';
 
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
@@ -107,7 +108,7 @@ function App() {
         return response.json();
       })
       .then(data => {
-        const foundTrailer = data.videos.find(el => el.type === 'Trailer').key
+        const foundTrailer = data.videos.find(el => el.type === 'Trailer').key;
         setTrailerKey(foundTrailer);
       })
       .catch(error => console.log(error));
@@ -146,3 +147,8 @@ function App() {
 }
 
 export default App;
+
+App.propTypes = {
+  allMovies: PropTypes.array.isRequired,
+  showFocusMovie: PropTypes.func.isRequired,
+};
