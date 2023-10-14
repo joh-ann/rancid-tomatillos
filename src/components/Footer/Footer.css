@@ -1,0 +1,38 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 100px;
+  width: 75vw;
+  padding: 10px 0px 5px 10px;
+  margin: 20px 0px 5px 45px;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #030e17;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 25vw;
+  color: #ffffff;
+  background-color: #030e17;
+}
+
+.subtitle {
+  font-family: 'Russo One', sans-serif;
+  font-size: 20px;
+}
+
+.project-details {
+  font-family: 'Russo One', sans-serif;
+  font-size: 12px;
+}
+
+.linkedin,
+.github {
+  display: flex;
+  flex-direction: column;
+}
