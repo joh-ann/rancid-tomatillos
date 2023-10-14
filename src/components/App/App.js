@@ -1,14 +1,12 @@
 import './App.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
-import movieData from '../../movieData';
 
 // modal
 const customStyles = {
@@ -24,21 +22,37 @@ const customStyles = {
     overflow: 'hidden',
     transform: 'translate(-50%, -50%)',
     backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
   },
   overlay: {
-    background: 'rgba(0, 0, 0, 0.5)'
-  }
+    background: 'rgba(0, 0, 0, 0.5)',
+  },
 };
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-Modal.setAppElement('#root')
+Modal.setAppElement('#root');
 
 function App() {
-  const [allMovies, setMovies] = useState(movieData.movies);
+  const [allMovies, setMovies] = useState([]);
   const [focusMovie, setFocusMovie] = useState([]);
   // modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function getAllMovies() {
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+      .then(response => response.json())
+      .then(data => {
+        console.log('data', data.movies);
+        setMovies([...allMovies, ...data.movies]);
+        console.log('Hellooo');
+      })
+      .catch(error => console.log(error));
+  }
+
+  useEffect(() => {
+    console.log('effect ran');
+    getAllMovies();
+  }, []);
 
   function openModal() {
     setIsOpen(true);
@@ -63,9 +77,9 @@ function App() {
   console.log('state', focusMovie);
 
   return (
-    <main className='app'>
+    <main className="app">
       <Header />
-      <div className='app-content-container'>
+      <div className="app-content-container">
         <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
       </div>
       <Footer />
@@ -75,11 +89,12 @@ function App() {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Selected Movie Modal"
-        >
-        <FocusMovie focusMovie={focusMovie} customStyles={customStyles}/>
-        <button className='close-modal-btn' onClick={closeModal}>×</button>
+      >
+        <FocusMovie focusMovie={focusMovie} customStyles={customStyles} />
+        <button className="close-modal-btn" onClick={closeModal}>
+          ×
+        </button>
       </Modal>
-
     </main>
   );
 }
