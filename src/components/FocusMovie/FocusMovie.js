@@ -5,11 +5,24 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
   const movieDetails = focusMovie.map(movie => {
     console.log('focusMovie', focusMovie);
     customStyles.content.backgroundImage = `url(${movie.backdrop_path})`;
+
+    const movieGenres = movie.genres.map((genre, index) => (
+      <div key={index} className="genre">
+        {genre}
+        {index < movie.genres.length - 1 && <>&nbsp;</>}
+      </div>
+    ));
+
+    console.log(movieGenres)
+    
     return (
       <div className="selected-movie">
         <img src={movie.poster_path} className="selected-movie-img" />
         <div className="selected-movie-header">
           <h2>{movie.title}</h2>
+          <div className="selected-movie-genres">
+            {movieGenres}
+          </div>
           <p>Release date: {movie.release_date}</p>
           <p>{movie.overview}</p>
         </div>

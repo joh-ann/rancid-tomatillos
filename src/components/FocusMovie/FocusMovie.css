@@ -25,3 +25,12 @@
   padding: 10px;
   border-radius: 5px;
 }
+
+.selected-movie-genres {
+  display: flex;
+  flex-direction: row;
+}
+
+.genre {
+  color: white;
+}
