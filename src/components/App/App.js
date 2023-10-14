@@ -37,22 +37,36 @@ function App() {
   const [focusMovie, setFocusMovie] = useState([]);
   // modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [error, setError] = useState('');
 
   function getAllMovies() {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-      .then(response => response.json())
-      .then(data => {
-        console.log('data', data.movies);
-        setMovies([...allMovies, ...data.movies]);
-        console.log('Hellooo');
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movie')
+      .then(response => {
+        if (!response.ok) {
+          console.log(`Error code: ${response.status}`);
+          throw new Error(`Sorry the Movies are not available`);
+        } else {
+          return response.json();
+        }
       })
-      .catch(error => console.log(error));
+      .then(data => {
+        setMovies([...allMovies, ...data.movies]);
+      })
+      .catch(error => setError(error.message));
   }
 
   useEffect(() => {
     console.log('effect ran');
     getAllMovies();
   }, []);
+
+  function errorMessage(message) {
+    return (
+      <div>
+        <p className="error-message">{error}</p>
+      </div>
+    );
+  }
 
   function openModal() {
     setIsOpen(true);
@@ -80,7 +94,11 @@ function App() {
     <main className="app">
       <Header />
       <div className="app-content-container">
-        <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
+        {error.length ? (
+          errorMessage()
+        ) : (
+          <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
+        )}
       </div>
       <Footer />
       <Modal
