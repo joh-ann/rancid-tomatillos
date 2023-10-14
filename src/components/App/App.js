@@ -82,7 +82,12 @@ function App() {
 
   function showFocusMovie(id) {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error code: ${response.status}`);
+        }
+        return response.json();
+      })
       .then(data => {
         setFocusMovie([data.movie]);
         openModal();
@@ -109,7 +114,11 @@ function App() {
         style={customStyles}
         contentLabel="Selected Movie Modal"
       >
-        <FocusMovie focusMovie={focusMovie} customStyles={customStyles} />
+        <FocusMovie
+          focusMovie={focusMovie}
+          customStyles={customStyles}
+          key={focusMovie.id}
+        />
         <button className="close-modal-btn" onClick={closeModal}>
           ×
         </button>

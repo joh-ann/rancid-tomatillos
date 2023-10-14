@@ -1,6 +1,6 @@
 import './FocusMovie.css';
 
-function FocusMovie({ focusMovie, customStyles }) {
+function FocusMovie({ focusMovie, customStyles, key }) {
   const movieDetails = focusMovie.map(movie => {
     console.log('focusMovie', focusMovie);
     customStyles.content.backgroundImage = `url(${movie.backdrop_path})`;
