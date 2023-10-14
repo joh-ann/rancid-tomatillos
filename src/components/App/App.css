@@ -7,6 +7,10 @@
 .app-content-container {
   display: flex;
   justify-content: center;
-  background-color: #030E17;
+  background-color: #030e17;
   padding: 40px 0px 40px 0px;
+}
+
+.app {
+  background-color: #030e17;
 }
