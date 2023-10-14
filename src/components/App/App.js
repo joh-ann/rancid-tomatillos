@@ -40,7 +40,7 @@ function App() {
   const [error, setError] = useState('');
 
   function getAllMovies() {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movie')
+    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(response => {
         if (!response.ok) {
           console.log(`Error code: ${response.status}`);
@@ -81,12 +81,13 @@ function App() {
   }
 
   function showFocusMovie(id) {
-    const clickedMovie = allMovies.filter(movie => {
-      return movie.id === id;
-    });
-    setFocusMovie(clickedMovie);
-    openModal();
-    return clickedMovie;
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
+      .then(response => response.json())
+      .then(data => {
+        setFocusMovie([data.movie]);
+        openModal();
+      })
+      .catch(error => console.log(error));
   }
   console.log('state', focusMovie);
 
