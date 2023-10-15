@@ -1,10 +1,5 @@
 .selected-movie {
   display: flex;
-  max-height: 80vh;
-}
-
-.selected-movie-container {
-  display: flex;
 }
 
 .selected-movie-img {
@@ -15,13 +10,26 @@
   margin-bottom: 10px;
 }
 
-.selected-movie-header {
+.selected-movie-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 80vh;
+  width: 100%;
+  margin-left: 25px;
+}
+
+.selected-movie-trailer {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.selected-movie-info {
   display: flex;
   flex-direction: column;
   color: #FFFFFF;
-  height: 100%;
   background-color: black;
-  max-width: 20vw;
+  max-width: 70%;
   padding: 10px;
   border-radius: 5px;
 }

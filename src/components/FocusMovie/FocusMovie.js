@@ -9,7 +9,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
     const movieGenres = movie.genres.map((genre, index) => (
       <div key={index} className="genre">
         {genre}
-        {index < movie.genres.length - 1 && <>&nbsp;</>}
+        {index < movie.genres.length - 1 && <>,&nbsp;</>}
       </div>
     ));
 
@@ -18,20 +18,28 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
     return (
       <div className="selected-movie">
         <img src={movie.poster_path} className="selected-movie-img" />
-        <div className="selected-movie-header">
-          <h2>{movie.title}</h2>
-          <div className="selected-movie-genres">
-            {movieGenres}
+        <div className='selected-movie-content'>
+            <iframe className='selected-movie-trailer'
+              width="90%"
+              height="800px"
+              src={`https://www.youtube.com/embed/${trailerKey}`}
+            ></iframe>
+          <div className="selected-movie-info">
+            <h2>{movie.title}</h2>
+            <p className="selected-movie-genres">
+              {movieGenres}
+            </p>
+            <p>
+              Release date: {movie.release_date}
+              <>&nbsp;</>
+              <>&nbsp;</>
+              Budget: ${movie.budget}
+              <>&nbsp;</>
+              <>&nbsp;</>
+              Revenue: ${movie.revenue}
+            </p>
+            <p>{movie.overview}</p>
           </div>
-          <p>Release date: {movie.release_date}</p>
-          <p>{movie.overview}</p>
-        </div>
-        <div className="selected-movie-trailer">
-          <iframe
-            width="420"
-            height="315"
-            src={`https://www.youtube.com/embed/${trailerKey}`}
-          ></iframe>
         </div>
       </div>
     );
