@@ -25,7 +25,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
               src={`https://www.youtube.com/embed/${trailerKey}`}
             ></iframe>
           <div className="selected-movie-info">
-            <h2>{movie.title}</h2>
+            <h2 className='selected-movie-title'>{movie.title}</h2>
             <p className="selected-movie-genres">
               {movieGenres}
             </p>
