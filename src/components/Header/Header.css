@@ -1,58 +1,55 @@
-/* * {
+* {
   border: solid green 1px;
-} */
+}
 
 .page-header {
   display: flex;
   flex-direction: row;
-  /* justify-content: flex-start; */
   align-items: flex-end;
+  padding: 20px 0px 20px 40px;
   color: #ffffff;
-  background-color: black;
+  background-color: #181717;
 }
+
 .title-container {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  /* border: solid green 3px; */
-  height: 100px;
-  width: 500px;
 }
 
 .page-title {
-  font-family: 'Russo One', sans-serif;
-  padding: 10px 10px 0px 10px;
-  margin: 20px 0px 0px 20px;
-  font-size: 50px;
+  font-family: 'Russo One';
+  font-size: 40px;
   color: #ffffff;
-  background-color: black;
 }
+
 .header-btns-container {
   display: flex;
-  padding: 0px 0px 7px 0px;
-  /* border: solid green 3px; */
-  width: 200px;
+  /* padding: 0px 0px 7px 0px; */
+  width: 300px; 
   flex: row;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .page-header-btn {
-  padding: 0.9em 2em;
+  padding: 0.7em 1.1em;
+  font-size: 1em;
   border: none;
   outline: none;
+  font-family: 'Quicksand';
   color: rgb(255, 255, 255);
   background: #111;
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 30px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-.page-header-btn:before {
+.page-header-btn:hover:before {
   content: '';
   background: linear-gradient(
     45deg,
@@ -73,14 +70,15 @@
   z-index: -1;
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  opacity: 0.5;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
   animation: glowing-button-85 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
-@keyframes page-header-btn {
+@keyframes glowing-button-85 {
   0% {
     background-position: 0 0;
   }
@@ -101,13 +99,13 @@
   background: #222;
   left: 0;
   top: 0;
-  border-radius: 10px;
+  border-radius: 50px;
 }
 
 .search-btn-container {
   display: flex;
   justify-content: flex-end;
-  padding: 0px 0px 7px 0px;
-  width: 560px;
-  /* border: solid green 3px; */
+  position: absolute;
+  right: 185px;
+  /* padding: 0px 0px 7px 0px; */
 }
