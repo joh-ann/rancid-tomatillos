@@ -24,6 +24,7 @@
   max-height: 80vh;
   width: 100%;
   margin-bottom: 10px;
+  overflow-y: auto;
 }
 
 .selected-movie-trailer {
@@ -73,4 +74,11 @@
   font-style: italic;
   font-size: 1em;
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .selected-movie-img {
+    width: 100%;
+    display: none;
+  }
 }
