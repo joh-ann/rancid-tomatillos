@@ -1,14 +1,14 @@
-* {
+/* * {
   border: solid green 1px;
-}
+} */
 
 .page-header {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  padding: 20px 0px 20px 40px;
+  padding: 50px 0px 20px 80px;
   color: #ffffff;
-  background-color: #181717;
+  background-color: rgba(24, 23, 23, 0.5);
 }
 
 .title-container {
