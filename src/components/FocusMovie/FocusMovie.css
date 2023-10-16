@@ -61,6 +61,7 @@
 
 .genre {
   color: #808080;
+  font-size: 1.3em;
 }
 
 .selected-movie-stats {
@@ -69,12 +70,13 @@
   justify-content: flex-end;
   margin-bottom: 20px;
   color: #808080;
+  font-size: 0.8em;
 }
 
 .selected-movie-overview {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1em;
   font-style: italic;
-  font-size: 1em;
   margin-bottom: 10px;
 }
 

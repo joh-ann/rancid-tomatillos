@@ -6,6 +6,7 @@
 
 .app-content-container {
   display: flex;
+  font-family: 'Quicksand', sans-serif;
   justify-content: center;
   background-color: #030e17;
   padding: 40px 0px 40px 0px;
