@@ -7,11 +7,11 @@ function Header() {
         <h1 className="page-title">Rancid Tomatillos</h1>
       </div>
       <div className="header-btns-container">
-        <button className="page-header-btn">Home</button>
-        <button className="page-header-btn">About</button>
+        <button className="page-header-btn">HOME</button>
+        <button className="page-header-btn">ABOUT</button>
       </div>
       <div className="search-btn-container">
-        <button className="page-header-btn">Search</button>
+        <button className="page-header-btn">SEARCH</button>
       </div>
     </div>
   );
