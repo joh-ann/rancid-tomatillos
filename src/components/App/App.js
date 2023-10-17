@@ -2,9 +2,11 @@ import './App.css';
 import React from 'react';
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
+import { Routes, Route } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
+import About from '../About/About';
 import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
@@ -117,13 +119,24 @@ function App() {
   return (
     <main className="app">
       <Header />
-      <div className="app-content-container">
-        {error.length ? (
-          errorMessage()
-        ) : (
-          <AllMovies allMovies={allMovies} showFocusMovie={showFocusMovie} />
-        )}
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            error.length ? (
+              errorMessage()
+            ) : (
+              <div className="app-content-container">
+                <AllMovies
+                  allMovies={allMovies}
+                  showFocusMovie={showFocusMovie}
+                />
+              </div>
+            )
+          }
+        />
+        <Route path="/about" element={<About />} />
+      </Routes>
       <Footer />
       <Modal
         isOpen={modalIsOpen}

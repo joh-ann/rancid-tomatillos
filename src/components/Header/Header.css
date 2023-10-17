@@ -27,7 +27,7 @@
 .header-btns-container {
   display: flex;
   /* padding: 0px 0px 7px 0px; */
-  width: 300px; 
+  width: 300px;
   flex: row;
   justify-content: space-evenly;
   align-items: center;
@@ -101,6 +101,10 @@
   left: 0;
   top: 0;
   border-radius: 50px;
+}
+
+.page-header-btn:focus {
+  text-decoration: underline 1px;
 }
 
 .search-btn-container {
