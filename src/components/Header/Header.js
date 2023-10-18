@@ -1,4 +1,5 @@
 import './Header.css';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
   return (
@@ -6,12 +7,17 @@ function Header() {
       <div className="title-container">
         <h1 className="page-title">Rancid Tomatillos</h1>
       </div>
+
       <div className="header-btns-container">
-        <button className="page-header-btn">HOME</button>
-        <button className="page-header-btn">ABOUT</button>
+        <NavLink to="/" className="page-header-btn">
+          HOME
+        </NavLink>
+        <NavLink to="/about" className="page-header-btn">
+          ABOUT
+        </NavLink>
       </div>
       <div className="search-btn-container">
-        <button className="page-header-btn">SEARCH</button>
+        <NavLink className="page-header-btn">SEARCH</NavLink>
       </div>
     </div>
   );
