@@ -1,4 +1,39 @@
-.about-us {
+.about-us-container {
+  border: solid green 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.about-us-johann {
+  border: solid green 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 150px;
-  background-color: blueviolet;
+  width: 450px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: black;
+}
+
+.about-us-ann {
+  border: solid green 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 150px;
+  width: 450px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: black;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 14px;
 }
