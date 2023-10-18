@@ -13,26 +13,25 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
       </div>
     ));
 
-    console.log(movieGenres)
-    
+    console.log(movieGenres);
+
     return (
       <div className="selected-movie">
         <img src={movie.poster_path} className="selected-movie-img" />
-        <div className='selected-movie-content'>
-            <iframe className='selected-movie-trailer'
-              width="90%"
-              height="400px"
-              src={`https://www.youtube.com/embed/${trailerKey}`}
-            ></iframe>
+        <div className="selected-movie-content">
+          <iframe
+            className="selected-movie-trailer"
+            width="90%"
+            height="400px"
+            src={`https://www.youtube.com/embed/${trailerKey}`}
+          ></iframe>
           <div className="selected-movie-info">
-            <div className='selected-movie-title'>
+            <div className="selected-movie-title">
               <h2>{movie.title}</h2>
               <h3>Rating: {movie.average_rating}/10</h3>
-              </div>
-            <p className="selected-movie-genres">
-              {movieGenres}
-            </p>
-            <p className='selected-movie-stats'>
+            </div>
+            <p className="selected-movie-genres">{movieGenres}</p>
+            <p className="selected-movie-stats">
               Release date: {movie.release_date}
               <>&nbsp;</>
               <>&nbsp;</>
@@ -41,7 +40,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
               <>&nbsp;</>
               Revenue: ${movie.revenue}
             </p>
-            <p className='selected-movie-overview'>{movie.overview}</p>
+            <p className="selected-movie-overview">{movie.overview}</p>
           </div>
         </div>
       </div>
