@@ -17,7 +17,9 @@ function Search({ allMovies, showFocusMovie, search }) {
         {searchString.length > 0 ? (
           <AllMovies allMovies={searchString} showFocusMovie={showFocusMovie} />
         ) : (
-          <p>No movies found</p>
+          <div className='empty-search'>
+            <p className='empty-search-text'>No Movies Found</p>
+          </div>
         )}
       </div>
     </div>
