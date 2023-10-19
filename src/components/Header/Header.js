@@ -2,13 +2,13 @@ import './Header.css';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import tomatillo from '../../images/tomatillo.png'
+import tomatillo from '../../images/tomatillo.png';
 
 function Header({ search, setSearch }) {
   return (
     <div className="page-header">
       <div className="title-container">
-        <img src={tomatillo} className='header-logo'/>
+        <img src={tomatillo} className="header-logo" />
         <h1 className="page-title">Rancid Tomatillos</h1>
       </div>
 
@@ -22,17 +22,16 @@ function Header({ search, setSearch }) {
       </div>
       <div className="search-btn-container">
         <NavLink to="/search">
-          <div class="box">
-            <form name="search">
-            <input
-              type="text"
-              class="input"
-              value={search}
-              onChange={event => setSearch(event.target.value)}
-            />
-            <FontAwesomeIcon icon={faSearch} className="search-icon" />
+          <div className="box">
+            <form className="search">
+              <input
+                type="text"
+                className="input"
+                value={search}
+                onChange={event => setSearch(event.target.value)}
+              />
+              <FontAwesomeIcon icon={faSearch} className="search-icon" />
             </form>
-
           </div>
         </NavLink>
       </div>

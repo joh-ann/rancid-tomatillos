@@ -140,7 +140,11 @@ function App() {
         <Route
           path="/search"
           element={
-            <Search allMovies={allMovies} showFocusMovie={showFocusMovie} search={search} />
+            <Search
+              allMovies={allMovies}
+              showFocusMovie={showFocusMovie}
+              search={search}
+            />
           }
         />
       </Routes>
@@ -169,7 +173,7 @@ function App() {
 
 export default App;
 
-App.propTypes = {
-  allMovies: PropTypes.array.isRequired,
-  showFocusMovie: PropTypes.func.isRequired,
-};
+// App.propTypes = {
+//   allMovies: PropTypes.array.isRequired,
+//   showFocusMovie: PropTypes.func.isRequired,
+// };

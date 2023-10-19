@@ -44,17 +44,31 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
     );
   });
 
-  return (
-  <div className="modal">
-    {movieDetails}
-  </div>
-  );
+  return <div className="modal">{movieDetails}</div>;
 }
 
 export default FocusMovie;
 
 FocusMovie.propTypes = {
-  focusMovie: PropTypes.array,
+  focusMovie: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string.isRequired,
+      backdrop_path: PropTypes.string.isRequired,
+      release_date: PropTypes.string,
+      overview: PropTypes.string.isRequired,
+      average_rating: PropTypes.number.isRequired,
+      genres: PropTypes.arrayOf({
+        id: PropTypes.number,
+        name: PropTypes.string.isRequired,
+      }),
+      budget: PropTypes.number,
+      revenue: PropTypes.number,
+      runtime: PropTypes.number,
+      tagline: PropTypes.string,
+    })
+  ),
   customStyles: PropTypes.object,
   trailerKey: PropTypes.string,
 };
