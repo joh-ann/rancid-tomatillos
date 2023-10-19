@@ -1,17 +1,16 @@
 .page-header {
   display: flex;
-  /* flex-direction: row; */
   align-items: center;
-  padding: 50px 0px 40px 60px;
+  padding: 40px 0px 40px 0px;
   color: #ffffff;
   background-color: rgba(24, 23, 23, 0.5);
 }
 
-/* .title-container {
+.title-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-} */
+  align-items: center;
+  margin-left: 165px;
+}
 
 .page-title {
   font-family: 'Russo One';
@@ -161,4 +160,11 @@
 
 .input:focus + .search-icon {
   display: none;
+}
+
+.header-logo {
+  height: 75px;
+  width: 75px;
+  margin-right: 12px;
+  margin-bottom: 6px;
 }

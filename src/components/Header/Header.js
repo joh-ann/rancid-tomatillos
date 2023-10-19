@@ -3,11 +3,13 @@ import { NavLink } from 'react-router-dom';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import tomatillo from '../../images/tomatillo.png'
 
 function Header({ search, setSearch }) {
   return (
     <div className="page-header">
       <div className="title-container">
+        <img src={tomatillo} className='header-logo'/>
         <h1 className="page-title">Rancid Tomatillos</h1>
       </div>
 
