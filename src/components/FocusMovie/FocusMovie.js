@@ -59,10 +59,7 @@ FocusMovie.propTypes = {
       release_date: PropTypes.string,
       overview: PropTypes.string.isRequired,
       average_rating: PropTypes.number.isRequired,
-      genres: PropTypes.arrayOf({
-        id: PropTypes.number,
-        name: PropTypes.string.isRequired,
-      }),
+      genres: PropTypes.array.isRequired,
       budget: PropTypes.number,
       revenue: PropTypes.number,
       runtime: PropTypes.number,

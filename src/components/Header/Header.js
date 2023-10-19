@@ -23,9 +23,10 @@ function Header({ search, setSearch }) {
       <div className="search-btn-container">
         <NavLink to="/search">
           <div className="box">
-            <form className="search">
+            <form name="search">
               <input
                 type="text"
+                name="input"
                 className="input"
                 value={search}
                 onChange={event => setSearch(event.target.value)}
