@@ -30,7 +30,7 @@ function Footer() {
             </a>
           </p>
       </div>
-      <div className="github">
+      <div className="github-block">
         <div className='title-icon'>
           <img src={github} className='footer-icon gh'/>
           <h2 className="subtitle">GitHub</h2>
