@@ -10,13 +10,7 @@ function About() {
         <h2>Johann Dee</h2>
         {/* <img src={johann} alt="Johann Dee" /> */}
         <p className="bio">
-          I'm a passionate software developer with a strong focus on front-end
-          technologies, including JavaScript, HTML, CSS, and React. My unique
-          background in construction and aviation provides a fresh perspective
-          to my work. I'm driven by a genuine love for problem-solving and a
-          desire to make meaningful contributions to the industry. I actively
-          seek opportunities for collaboration, innovation, and the creation of
-          exciting projects.
+          Johann Dee, currently a Turing student, brings a background rooted in aviation and construction to the tech industry. Driven by a passion for detail and continuous learning, he transitioned into tech through Turing's Front-End Engineering program. Johann aims to channel his expanding tech skills into impactful projects and hopes to pursue engineering roles that leverage his expertise. Outside of coding, he finds joy in playing tennis and exploring new dining experiences.
         </p>
       </div>
       <div className="about-us-ann">

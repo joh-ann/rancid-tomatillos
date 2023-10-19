@@ -1,6 +1,5 @@
 import './Card.css';
 import PropTypes from 'prop-types';
-
 function Card({
   id,
   poster_path,
@@ -12,19 +11,16 @@ function Card({
   return (
     <div className="card" onClick={() => showFocusMovie(id)}>
       <img src={poster_path} className="movie-card-img" />
-      <div className="card-rating">{average_rating.toFixed(1)}</div>
+      <div className="card-rating">{average_rating * 10}%</div>
       <div className="card-description">
         <h2 className="card-title">{title}</h2>
         <p className="card-year">{release_date}</p>
       </div>
-      {/* <p>{release_date}</p> */}
-      {/* <button onClick={() => showFocusMovie(id)}>Show Movie Details</button> */}
     </div>
   );
 }
 
 export default Card;
-
 Card.propTypes = {
   id: PropTypes.number,
   poster_path: PropTypes.string,
