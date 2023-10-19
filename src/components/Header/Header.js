@@ -1,5 +1,6 @@
 import './Header.css';
 import { NavLink } from 'react-router-dom';
+import React from 'react';
 
 function Header() {
   return (
@@ -17,7 +18,9 @@ function Header() {
         </NavLink>
       </div>
       <div className="search-btn-container">
-        <NavLink className="page-header-btn">SEARCH</NavLink>
+        <NavLink to="/search" className="page-header-btn">
+          SEARCH
+        </NavLink>
       </div>
     </div>
   );

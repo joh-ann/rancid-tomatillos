@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import About from '../About/About';
+import Search from '../Search/Search';
 import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
@@ -118,7 +119,7 @@ function App() {
 
   return (
     <main className="app">
-      <Header />
+      <Header allMovies={allMovies} />
       <Routes>
         <Route
           path="/"
@@ -136,6 +137,12 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
+        <Route
+          path="/search"
+          element={
+            <Search allMovies={allMovies} showFocusMovie={showFocusMovie} />
+          }
+        />
       </Routes>
       <Footer />
       <Modal
