@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 function FocusMovie({ focusMovie, customStyles, trailerKey }) {
   const movieDetails = focusMovie.map(movie => {
-    console.log('focusMovie', focusMovie);
     customStyles.content.backgroundImage = `url(${movie.backdrop_path})`;
 
     const movieGenres = movie.genres.map((genre, index) => (
@@ -12,8 +11,6 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
         {index < movie.genres.length - 1 && <>,&nbsp;</>}
       </div>
     ));
-
-    console.log(movieGenres);
 
     return (
       <div className="selected-movie">
@@ -47,7 +44,11 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
     );
   });
 
-  return <div className="modal">{movieDetails}</div>;
+  return (
+  <div className="modal">
+    {movieDetails}
+  </div>
+  );
 }
 
 export default FocusMovie;

@@ -49,7 +49,7 @@ function App() {
     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(response => {
         if (!response.ok) {
-          console.log(`Error code: ${response.status}`);
+          // console.log(`Error code: ${response.status}`);
           throw new Error(`Sorry the Movies are not available`);
         } else {
           return response.json();
@@ -62,11 +62,10 @@ function App() {
   }
 
   useEffect(() => {
-    console.log('effect ran');
     getAllMovies();
   }, []);
 
-  function errorMessage(message) {
+  function errorMessage() {
     return (
       <div>
         <p className="error-message">{error}</p>
@@ -101,7 +100,6 @@ function App() {
       })
       .catch(error => console.log(error));
   }
-  console.log('state', focusMovie);
 
   function getMovieTrailer(id) {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)

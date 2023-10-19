@@ -23,7 +23,6 @@
   display: flex;
   width: 400px;
   gap: 20px;
-  /* flex: row; */
   justify-content: center;
   align-items: center;
 }
@@ -46,8 +45,6 @@
 }
 
 .page-header-btn {
-/* .page-header-btn:focus:before, */
-/* .page-header-btn:active:before { */
   color: #fff;
   text-transform: uppercase;
   text-decoration: none;

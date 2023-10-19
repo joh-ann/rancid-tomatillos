@@ -1,8 +1,6 @@
 import './Search.css';
 import '../AllMovies/AllMovies.css';
-// import { useState, useEffect } from 'react';
 import AllMovies from '../AllMovies/AllMovies';
-import React from 'react';
 
 function Search({ allMovies, showFocusMovie, search }) {
   const searchString = allMovies.filter(movie => {
