@@ -11,6 +11,7 @@ import Search from '../Search/Search';
 import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
+import ReactBuilt from '../ReactBuilt/ReactBuilt';
 
 // modal
 const customStyles = {
@@ -40,6 +41,7 @@ function App() {
   const [allMovies, setMovies] = useState([]);
   const [focusMovie, setFocusMovie] = useState([]);
   const [trailerKey, setTrailerKey] = useState('');
+  const [search, setSearch] = useState(null);
   // modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [error, setError] = useState('');
@@ -48,7 +50,7 @@ function App() {
     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(response => {
         if (!response.ok) {
-          console.log(`Error code: ${response.status}`);
+          // console.log(`Error code: ${response.status}`);
           throw new Error(`Sorry the Movies are not available`);
         } else {
           return response.json();
@@ -61,11 +63,10 @@ function App() {
   }
 
   useEffect(() => {
-    console.log('effect ran');
     getAllMovies();
   }, []);
 
-  function errorMessage(message) {
+  function errorMessage() {
     return (
       <div>
         <p className="error-message">{error}</p>
@@ -100,7 +101,6 @@ function App() {
       })
       .catch(error => console.log(error));
   }
-  console.log('state', focusMovie);
 
   function getMovieTrailer(id) {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
@@ -119,7 +119,7 @@ function App() {
 
   return (
     <main className="app">
-      <Header allMovies={allMovies} />
+      <Header allMovies={allMovies} setSearch={setSearch} />
       <Routes>
         <Route
           path="/"
@@ -140,11 +140,12 @@ function App() {
         <Route
           path="/search"
           element={
-            <Search allMovies={allMovies} showFocusMovie={showFocusMovie} />
+            <Search allMovies={allMovies} showFocusMovie={showFocusMovie} search={search} />
           }
         />
       </Routes>
       <Footer />
+      <ReactBuilt />
       <Modal
         isOpen={modalIsOpen}
         // onAfterOpen={afterOpenModal}

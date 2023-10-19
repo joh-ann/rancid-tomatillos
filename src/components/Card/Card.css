@@ -55,11 +55,11 @@
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1em;
+  font-size: 0.9em;
   background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 50%;
+  border-radius: 20%;
   margin: 5px;
-  padding: 10px;
+  padding: 8px;
   color: white;
 }
 
