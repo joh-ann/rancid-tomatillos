@@ -1,0 +1,21 @@
+.built-with {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(24, 23, 23, 0.5);
+  padding: 20px 0px 10px 0px;
+}
+
+.built-with-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #FFFFFF;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.react-logo {
+  height: 24px;
+  width: 24px;
+}

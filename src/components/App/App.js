@@ -11,6 +11,7 @@ import Search from '../Search/Search';
 import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
+import ReactBuilt from '../ReactBuilt/ReactBuilt';
 
 // modal
 const customStyles = {
@@ -144,6 +145,7 @@ function App() {
         />
       </Routes>
       <Footer />
+      <ReactBuilt />
       <Modal
         isOpen={modalIsOpen}
         // onAfterOpen={afterOpenModal}

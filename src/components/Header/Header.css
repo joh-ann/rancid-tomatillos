@@ -13,7 +13,7 @@
 }
 
 .page-title {
-  font-family: 'Russo One';
+  font-family: 'Russo One', sans-serif;
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.8));
   font-size: 45px;
   color: #ffffff;
@@ -33,7 +33,7 @@
   border: none;
   outline: none;
   font-weight: bold;
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', sans-serif;
   color: rgb(255, 255, 255);
   cursor: pointer;
   position: relative;
