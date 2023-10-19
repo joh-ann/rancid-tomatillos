@@ -40,6 +40,7 @@ function App() {
   const [allMovies, setMovies] = useState([]);
   const [focusMovie, setFocusMovie] = useState([]);
   const [trailerKey, setTrailerKey] = useState('');
+  const [search, setSearch] = useState(null);
   // modal
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [error, setError] = useState('');
@@ -119,7 +120,7 @@ function App() {
 
   return (
     <main className="app">
-      <Header allMovies={allMovies} />
+      <Header allMovies={allMovies} setSearch={setSearch} />
       <Routes>
         <Route
           path="/"
@@ -140,7 +141,7 @@ function App() {
         <Route
           path="/search"
           element={
-            <Search allMovies={allMovies} showFocusMovie={showFocusMovie} />
+            <Search allMovies={allMovies} showFocusMovie={showFocusMovie} search={search} />
           }
         />
       </Routes>

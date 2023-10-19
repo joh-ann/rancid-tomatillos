@@ -2,7 +2,7 @@ import './Header.css';
 import { NavLink } from 'react-router-dom';
 import React from 'react';
 
-function Header() {
+function Header({ search, setSearch }) {
   return (
     <div className="page-header">
       <div className="title-container">
@@ -19,7 +19,15 @@ function Header() {
       </div>
       <div className="search-btn-container">
         <NavLink to="/search" className="page-header-btn">
-          SEARCH
+          <form>
+          <input
+            type="text"
+            placeholder="search"
+            name="search"
+            value={search}
+            onChange={event => setSearch(event.target.value)}
+          />
+          </form>
         </NavLink>
       </div>
     </div>
