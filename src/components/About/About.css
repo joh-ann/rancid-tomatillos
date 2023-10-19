@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: center;
   gap: 100px;
-  height: 80vh;
 }
 
 .about-us-member {
@@ -11,7 +10,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 450px;
+  /* width: 450px; */
   font-size: 1em;
   color: #FFFFFF;
 }
@@ -21,12 +20,12 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 10px;
-  width: 430px;
+  width: 450px;
 }
 
 .bio-text {
   font-size: 1em;
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', sans-serif;
 }
 
 .about-us-picture {
@@ -34,4 +33,19 @@
   width: 250px;
   border-radius: 50%;
   margin: 50px 0px 20px 0px;
+}
+
+@media (max-width: 1080px) {
+  .about-us-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+}
+
+@media (max-width: 450px) {
+  .bio-container {
+    width: auto;
+  }
 }
