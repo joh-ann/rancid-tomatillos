@@ -28,7 +28,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
           <div className="selected-movie-info">
             <div className="selected-movie-title">
               <h2>{movie.title}</h2>
-              <h3>Rating: {movie.average_rating}/10</h3>
+              <h3>🍿 {movie.average_rating * 10}%</h3>
             </div>
             <p className="selected-movie-genres">{movieGenres}</p>
             <p className="selected-movie-stats">
