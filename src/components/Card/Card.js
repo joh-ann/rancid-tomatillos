@@ -21,10 +21,11 @@ function Card({
 }
 
 export default Card;
+
 Card.propTypes = {
   id: PropTypes.number,
-  poster_path: PropTypes.string,
-  title: PropTypes.string,
-  average_rating: PropTypes.number,
+  poster_path: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  average_rating: PropTypes.number.isRequired,
   release_date: PropTypes.string,
 };
