@@ -143,10 +143,12 @@
   color: #FFFFFF;
   outline: none;
   transition: .5s;
+  padding-left: 34px;
 }
 
-.box:hover input{
-  width: 225px;
+.box:hover input,
+input:focus {
+  width: 200px;
   background: #0d0d0e;
   border-radius: 10px;
 }
@@ -154,7 +156,7 @@
 .search-icon {
   position: absolute;
   top: 50%;
-  left: 16px;
+  left: 18px;
   transform: translateY(-50%);
 }
 
