@@ -23,7 +23,7 @@
 
 .header-btns-container {
   display: flex;
-  /* width: 40%; */
+  width: 40%;
   gap: 20px;
   justify-content: center;
   align-items: center;
@@ -125,6 +125,9 @@ input:focus {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .search-btn-container {
+    margin-top: 20px;
   }
 }
 
