@@ -16,6 +16,8 @@ describe('Search page elements', () => {
       .get('.subtitle')
       .contains('Rancid Tomatillos')
       .get("p[class='empty-search-text']")
-      .contains('No Movies Found');
+      .contains('No Movies Found')
+      .get("input[name='input']")
+      .type('Black');
   });
 });
