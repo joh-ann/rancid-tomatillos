@@ -123,7 +123,7 @@
 }
 
 .search-btn-container {
-  position: fixed;
+  position: absolute;
   right: 170px;
 }
 
