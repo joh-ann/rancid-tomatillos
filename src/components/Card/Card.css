@@ -63,9 +63,9 @@
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .card {
-    width: 40%;
+    width: 35%;
   }
 
   .card-description {
