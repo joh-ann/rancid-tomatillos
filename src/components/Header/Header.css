@@ -1,21 +1,17 @@
-/* * {
-  border: solid green 1px;
-} */
-
 .page-header {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: center;
-  padding: 50px 0px 20px 60px;
+  padding: 50px 0px 40px 60px;
   color: #ffffff;
   background-color: rgba(24, 23, 23, 0.5);
 }
 
-.title-container {
+/* .title-container {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-}
+} */
 
 .page-title {
   font-family: 'Russo One';
@@ -26,10 +22,10 @@
 
 .header-btns-container {
   display: flex;
-  /* padding: 0px 0px 7px 0px; */
-  width: 300px;
-  flex: row;
-  justify-content: space-evenly;
+  width: 400px;
+  gap: 20px;
+  /* flex: row; */
+  justify-content: center;
   align-items: center;
 }
 
@@ -40,17 +36,18 @@
   outline: none;
   font-family: 'Quicksand';
   color: rgb(255, 255, 255);
-  background: #111;
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 30px;
+  border-radius: 20px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
 }
 
-.page-header-btn:hover:before {
+.page-header-btn:hover:before, 
+.page-header-btn:focus:before,
+.page-header-btn:active:before {
   content: '';
   background: linear-gradient(
     45deg,
@@ -65,18 +62,18 @@
     #ff0000
   );
   position: absolute;
-  top: -2px;
-  left: -2px;
+  top: 0px;
+  left: 0px;
   background-size: 400%;
   z-index: -1;
   filter: blur(5px);
   -webkit-filter: blur(5px);
-  opacity: 0.5;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
+  opacity: 0.2;
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
   animation: glowing-button-85 20s linear infinite;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 30px;
+  transition: opacity 1s ease-in-out;
+  border-radius: 50px;
 }
 
 @keyframes glowing-button-85 {
@@ -97,20 +94,11 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
   left: 0;
   top: 0;
-  border-radius: 50px;
-}
-
-.page-header-btn:focus {
-  text-decoration: underline 1px;
 }
 
 .search-btn-container {
-  display: flex;
-  justify-content: flex-end;
-  position: absolute;
-  right: 185px;
-  /* padding: 0px 0px 7px 0px; */
+  position: fixed;
+  right: 170px;
 }
