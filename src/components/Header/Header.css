@@ -120,7 +120,7 @@ input:focus {
   margin-bottom: 6px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1350px) {
   .page-header {
     flex-direction: column;
     flex-wrap: wrap;
