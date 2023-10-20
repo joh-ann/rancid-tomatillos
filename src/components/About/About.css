@@ -46,6 +46,9 @@
   .bio-container {
     margin-bottom: 0px;
   }
+  .ann {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 450px) {
