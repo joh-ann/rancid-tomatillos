@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import Modal from 'react-modal';
-import PropTypes from 'prop-types';
 import { Routes, Route } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
@@ -12,6 +11,7 @@ import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
 import ReactBuilt from '../ReactBuilt/ReactBuilt';
+import { getAllMovies, getFocusMovie, getTrailer } from '../../apiCalls';
 
 // modal
 const customStyles = {
@@ -47,33 +47,14 @@ function App() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [error, setError] = useState('');
 
-  function getAllMovies() {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-      .then(response => {
-        if (!response.ok) {
-          if (response.status === 404) {
-            throw new Error('Sorry, the movies were not found.');
-          } else if (response.status === 500) {
-            throw new Error(
-              'Oops, something went wrong on our server. Please try again later.'
-            );
-          } else {
-            throw new Error('An error occurred while fetching movies.');
-          }
-        } else {
-          return response.json();
-        }
-      })
+  useEffect(() => {
+    getAllMovies()
       .then(data => {
         setMovies([...allMovies, ...data.movies]);
       })
       .catch(error => {
         setError(error.message);
       });
-  }
-
-  useEffect(() => {
-    getAllMovies();
   }, []);
 
   function errorMessage() {
@@ -97,13 +78,7 @@ function App() {
   }
 
   function showFocusMovie(id) {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Error code: ${response.status}`);
-        }
-        return response.json();
-      })
+    getFocusMovie(id)
       .then(data => {
         setFocusMovie([data.movie]);
         getMovieTrailer(id);
@@ -113,13 +88,7 @@ function App() {
   }
 
   function getMovieTrailer(id) {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Error code: ${response.status}`);
-        }
-        return response.json();
-      })
+    getTrailer(id)
       .then(data => {
         const foundTrailer = data.videos.find(el => el.type === 'Trailer');
         console.log(foundTrailer);
