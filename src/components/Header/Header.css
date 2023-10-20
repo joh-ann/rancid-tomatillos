@@ -93,12 +93,13 @@
   outline: none;
   transition: .5s;
   padding-left: 34px;
+  cursor: pointer;
 }
 
 .box:hover input,
 input:focus {
   width: 200px;
-  background: #0d0d0e;
+  background: #39393d;
   border-radius: 10px;
 }
 
