@@ -51,8 +51,15 @@ function App() {
     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(response => {
         if (!response.ok) {
-          // console.log(`Error code: ${response.status}`);
-          throw new Error(`Sorry the Movies are not available`);
+          if (response.status === 404) {
+            throw new Error('Sorry, the movies were not found.');
+          } else if (response.status === 500) {
+            throw new Error(
+              'Oops, something went wrong on our server. Please try again later.'
+            );
+          } else {
+            throw new Error('An error occurred while fetching movies.');
+          }
         } else {
           return response.json();
         }
@@ -60,7 +67,9 @@ function App() {
       .then(data => {
         setMovies([...allMovies, ...data.movies]);
       })
-      .catch(error => setError(error.message));
+      .catch(error => {
+        setError(error.message);
+      });
   }
 
   useEffect(() => {
@@ -113,11 +122,11 @@ function App() {
       })
       .then(data => {
         const foundTrailer = data.videos.find(el => el.type === 'Trailer');
-        console.log(foundTrailer)
+        console.log(foundTrailer);
         if (foundTrailer === undefined) {
-          setTrailerKey('Lesx_Rda5V0') // laid-back camp
+          setTrailerKey('Lesx_Rda5V0'); // laid-back camp
         } else {
-        setTrailerKey(foundTrailer.key);
+          setTrailerKey(foundTrailer.key);
         }
       })
       .catch(error => console.log(error));
