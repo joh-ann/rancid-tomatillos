@@ -23,4 +23,38 @@ describe('About page elements', () => {
       .get('.subtitle')
       .contains('Rancid Tomatillos');
   });
+
+  it('should display the home page elements', () => {
+    cy.get('.home')
+      .click()
+      .get('h1')
+      .contains('Rancid Tomatillos')
+      .get('.card')
+      .should('have.length', 14)
+      .get('.card-title')
+      .first()
+      .contains('h2', 'Black Adam')
+      .get('.card-title')
+      .last()
+      .contains('The Soccer Football Movie')
+      .get('.subtitle')
+      .contains('Rancid Tomatillos');
+  });
+
+  it('should display search results', () => {
+    cy.get('h1')
+      .contains('Rancid Tomatillos')
+      .get('.subtitle')
+      .contains('Rancid Tomatillos')
+      .get('form')
+      .click()
+      .window()
+      .then(win => {
+        win.document.querySelector('.search-icon').remove();
+      })
+      .get("input[name='input']")
+      .type('Black')
+      .get('.movie-card-img')
+      .should('have.length', 2);
+  });
 });

@@ -13,10 +13,10 @@ function Header({ search, setSearch }) {
       </div>
 
       <div className="header-btns-container">
-        <NavLink to="/" className="page-header-btn">
+        <NavLink to="/" className="page-header-btn home">
           HOME
         </NavLink>
-        <NavLink to="/about" className="page-header-btn">
+        <NavLink to="/about" className="page-header-btn about">
           ABOUT
         </NavLink>
       </div>
