@@ -12,6 +12,27 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
       </div>
     ));
 
+    let ratingIcon;
+    if (movie.average_rating >= 5) {
+      ratingIcon = '🍅'
+    } else {
+      ratingIcon = '🦠'
+    }
+
+    let budgetAmt;
+    let revenueAmt;
+
+    if (movie.budget === 0) {
+      budgetAmt = 'N/A'
+    } else {
+      budgetAmt = `$${movie.budget}`
+    }
+    if (movie.revenue === 0) {
+      revenueAmt = 'N/A'
+    } else {
+      revenueAmt = `$${movie.revenue}`
+    }
+
     return (
       <div className="selected-movie">
         <img src={movie.poster_path} className="selected-movie-img" />
@@ -25,17 +46,17 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
           <div className="selected-movie-info">
             <div className="selected-movie-title">
               <h2>{movie.title}</h2>
-              <h3>🍿 {movie.average_rating * 10}%</h3>
+              <h3>{ratingIcon} {movie.average_rating * 10}%</h3>
             </div>
             <p className="selected-movie-genres">{movieGenres}</p>
             <p className="selected-movie-stats">
               Release date: {movie.release_date}
               <>&nbsp;</>
               <>&nbsp;</>
-              Budget: ${movie.budget}
+              Budget: {budgetAmt}
               <>&nbsp;</>
               <>&nbsp;</>
-              Revenue: ${movie.revenue}
+              Revenue: {revenueAmt}
             </p>
             <p className="selected-movie-overview">{movie.overview}</p>
           </div>
