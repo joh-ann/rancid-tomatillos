@@ -12,6 +12,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
       </div>
     ));
 
+    // rating icon
     let ratingIcon;
     if (movie.average_rating >= 5) {
       ratingIcon = '🍅'
@@ -19,6 +20,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
       ratingIcon = '🦠'
     }
 
+    // budget & revenue
     let budgetAmt;
     let revenueAmt;
 
@@ -33,6 +35,14 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
       revenueAmt = `$${movie.revenue}`
     }
 
+    // runtime
+    const totalMins = movie.runtime
+    const hours = Math.floor(totalMins / 60)
+    const remainingMins = totalMins % 60;
+
+    const runTime = `${hours}h ${remainingMins}m`
+
+
     return (
       <div className="selected-movie">
         <img src={movie.poster_path} className="selected-movie-img" />
@@ -45,7 +55,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
           ></iframe>
           <div className="selected-movie-info">
             <div className="selected-movie-title">
-              <h2>{movie.title}</h2>
+              <h2>{movie.title} - {runTime}</h2>
               <h3>{ratingIcon} {movie.average_rating * 10}%</h3>
             </div>
             <p className="selected-movie-genres">{movieGenres}</p>
@@ -83,6 +93,7 @@ FocusMovie.propTypes = {
       genres: PropTypes.array.isRequired,
       budget: PropTypes.number,
       revenue: PropTypes.number,
+      runtime: PropTypes.number,
     })
   ),
   customStyles: PropTypes.object,
