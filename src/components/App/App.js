@@ -11,7 +11,7 @@ import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
 import ReactBuilt from '../ReactBuilt/ReactBuilt';
-import { getAllMovies, getFocusMovie } from '../../apiCalls';
+import { getAllMovies, getFocusMovie, getTrailer } from '../../apiCalls';
 
 // modal
 const customStyles = {
@@ -88,13 +88,7 @@ function App() {
   }
 
   function getMovieTrailer(id) {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error(`Error code: ${response.status}`);
-        }
-        return response.json();
-      })
+    getTrailer(id)
       .then(data => {
         const foundTrailer = data.videos.find(el => el.type === 'Trailer');
         console.log(foundTrailer);

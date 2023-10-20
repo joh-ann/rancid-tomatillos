@@ -28,3 +28,14 @@ export function getFocusMovie(id) {
     return response.json();
   });
 }
+
+export function getTrailer(id) {
+  return fetch(
+    `https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`
+  ).then(response => {
+    if (!response.ok) {
+      throw new Error(`Error code: ${response.status}`);
+    }
+    return response.json();
+  });
+}
