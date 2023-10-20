@@ -5,4 +5,5 @@
   justify-content: center;
   gap: 15px;
   max-width: 85vw;
+  animation: fadeIn 1.5s forwards;
 }
