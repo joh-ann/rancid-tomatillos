@@ -15,9 +15,9 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
     // rating icon
     let ratingIcon;
     if (movie.average_rating >= 5) {
-      ratingIcon = '🍅'
+      ratingIcon = '🍅';
     } else {
-      ratingIcon = '🦠'
+      ratingIcon = '🦠';
     }
 
     // budget & revenue
@@ -25,28 +25,33 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
     let revenueAmt;
 
     if (movie.budget === 0) {
-      budgetAmt = 'N/A'
+      budgetAmt = 'N/A';
     } else {
-      budgetAmt = `$${movie.budget}`
+      budgetAmt = `$${movie.budget}`;
     }
     if (movie.revenue === 0) {
-      revenueAmt = 'N/A'
+      revenueAmt = 'N/A';
     } else {
-      revenueAmt = `$${movie.revenue}`
+      revenueAmt = `$${movie.revenue}`;
     }
 
     // runtime
-    const totalMins = movie.runtime
-    const hours = Math.floor(totalMins / 60)
+    const totalMins = movie.runtime;
+    const hours = Math.floor(totalMins / 60);
     const remainingMins = totalMins % 60;
 
-    const runTime = `${hours}h ${remainingMins}m`
+    const runTime = `${hours}h ${remainingMins}m`;
 
     return (
       <div className="selected-movie">
-        <img src={movie.poster_path} className="selected-movie-img" />
+        <img
+          src={movie.poster_path}
+          className="selected-movie-img"
+          alt={movie.title}
+        />
         <div className="selected-movie-content">
           <iframe
+            title="youtube movie trailer"
             className="selected-movie-trailer"
             width="90%"
             height="400px"
@@ -54,8 +59,12 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
           ></iframe>
           <div className="selected-movie-info">
             <div className="selected-movie-title">
-              <h2>{movie.title} - {runTime}</h2>
-              <h3>{ratingIcon} {movie.average_rating * 10}%</h3>
+              <h2>
+                {movie.title} - {runTime}
+              </h2>
+              <h3>
+                {ratingIcon} {movie.average_rating * 10}%
+              </h3>
             </div>
             <p className="selected-movie-genres">{movieGenres}</p>
             <p className="selected-movie-stats">

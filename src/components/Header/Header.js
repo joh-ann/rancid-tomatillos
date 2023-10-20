@@ -9,7 +9,7 @@ function Header({ search, setSearch }) {
   return (
     <div className="page-header">
       <div className="title-container">
-        <img src={tomatillo} className="header-logo" />
+        <img src={tomatillo} className="header-logo" alt="rancid-icon" />
         <h1 className="page-title">Rancid Tomatillos</h1>
       </div>
 
@@ -26,6 +26,7 @@ function Header({ search, setSearch }) {
           <div className="box">
             <form name="search">
               <input
+                aria-label="Search"
                 type="text"
                 name="input"
                 className="input"
