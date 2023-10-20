@@ -172,8 +172,3 @@ function App() {
 }
 
 export default App;
-
-// App.propTypes = {
-//   allMovies: PropTypes.array.isRequired,
-//   showFocusMovie: PropTypes.func.isRequired,
-// };
