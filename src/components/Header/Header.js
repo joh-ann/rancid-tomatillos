@@ -13,19 +13,20 @@ function Header({ search, setSearch }) {
       </div>
 
       <div className="header-btns-container">
-        <NavLink to="/" className="page-header-btn">
+        <NavLink to="/" className="page-header-btn home">
           HOME
         </NavLink>
-        <NavLink to="/about" className="page-header-btn">
+        <NavLink to="/about" className="page-header-btn about">
           ABOUT
         </NavLink>
       </div>
       <div className="search-btn-container">
         <NavLink to="/search">
           <div className="box">
-            <form className="search">
+            <form name="search">
               <input
                 type="text"
+                name="input"
                 className="input"
                 value={search}
                 onChange={event => setSearch(event.target.value)}

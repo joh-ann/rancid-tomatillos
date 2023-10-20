@@ -45,4 +45,37 @@ describe('should open to home page', () => {
         'https://image.tmdb.org/t/p/original//438QXt1E3WJWb3PqNniK0tAE5c1.jpg'
       );
   });
+
+  it('should display the about page', () => {
+    cy.get('.about')
+      .click()
+      .get('h1')
+      .contains('Rancid Tomatillos')
+      .get('h2')
+      .contains('Johann Dee')
+      .get('p')
+      .contains('Ann')
+      .get("div[class='about-us-member']")
+      .find('img')
+      .should('be.visible')
+      .get('.subtitle')
+      .contains('Rancid Tomatillos');
+  });
+
+  it('should display search results', () => {
+    cy.get('h1')
+      .contains('Rancid Tomatillos')
+      .get('.subtitle')
+      .contains('Rancid Tomatillos')
+      .get('form')
+      .click()
+      .window()
+      .then(win => {
+        win.document.querySelector('.search-icon').remove();
+      })
+      .get("input[name='input']")
+      .type('Black')
+      .get('.movie-card-img')
+      .should('have.length', 2);
+  });
 });
