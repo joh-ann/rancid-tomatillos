@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import tomatillo from '../../images/tomatillo.png';
+import PropTypes from 'prop-types';
 
 function Header({ search, setSearch }) {
   return (
@@ -41,3 +42,16 @@ function Header({ search, setSearch }) {
 }
 
 export default Header;
+
+Header.propTypes = {
+  search: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      poster_path: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      average_rating: PropTypes.number.isRequired,
+      release_date: PropTypes.string.isRequired,
+    })
+  ),
+  setSearch: PropTypes.func,
+};

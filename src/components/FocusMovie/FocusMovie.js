@@ -62,8 +62,6 @@ FocusMovie.propTypes = {
       genres: PropTypes.array.isRequired,
       budget: PropTypes.number,
       revenue: PropTypes.number,
-      runtime: PropTypes.number,
-      tagline: PropTypes.string,
     })
   ),
   customStyles: PropTypes.object,

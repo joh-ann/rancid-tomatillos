@@ -23,9 +23,9 @@ function Card({
 export default Card;
 
 Card.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.number.isRequired,
   poster_path: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   average_rating: PropTypes.number.isRequired,
-  release_date: PropTypes.string,
+  release_date: PropTypes.string.isRequired,
 };
