@@ -88,17 +88,18 @@
   border-radius: 50px;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.3em;
   color: #FFFFFF;
   outline: none;
   transition: .5s;
   padding-left: 34px;
+  cursor: pointer;
 }
 
 .box:hover input,
 input:focus {
   width: 200px;
-  background: #0d0d0e;
+  background: #39393d;
   border-radius: 10px;
 }
 
@@ -120,7 +121,7 @@ input:focus {
   margin-bottom: 6px;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1350px) {
   .page-header {
     flex-direction: column;
     flex-wrap: wrap;

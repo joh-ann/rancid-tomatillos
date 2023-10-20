@@ -8,10 +8,17 @@ function Card({
   release_date,
   showFocusMovie,
 }) {
+
+  let ratingIcon;
+  if (average_rating >= 5) {
+    ratingIcon = '🍅'
+  } else {
+    ratingIcon = '🦠'
+  }
   return (
     <div className="card" onClick={() => showFocusMovie(id)}>
       <img src={poster_path} className="movie-card-img" />
-      <div className="card-rating">🍿 {average_rating * 10}%</div>
+      <div className="card-rating">{ratingIcon} {average_rating * 10}%</div>
       <div className="card-description">
         <h2 className="card-title">{title}</h2>
         <p className="card-year">{release_date}</p>

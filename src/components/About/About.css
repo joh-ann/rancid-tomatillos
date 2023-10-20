@@ -21,6 +21,7 @@
   justify-content: flex-start;
   margin-top: 10px;
   width: 450px;
+  margin-bottom: 40px;
 }
 
 .bio-text {
@@ -42,10 +43,17 @@
     align-items: center;
     gap: 0px;
   }
+  .bio-container {
+    margin-bottom: 0px;
+  }
+  .ann {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 450px) {
   .bio-container {
     width: auto;
+    margin-bottom: 0px;
   }
 }

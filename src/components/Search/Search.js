@@ -6,7 +6,9 @@ import PropTypes from 'prop-types';
 function Search({ allMovies, showFocusMovie, search }) {
   const searchString = allMovies.filter(movie => {
     if (search) {
-      return movie.title.includes(search);
+      const searchLower = search.toLowerCase();
+      const titleLower = movie.title.toLowerCase();
+      return titleLower.includes(searchLower);
     }
   });
 

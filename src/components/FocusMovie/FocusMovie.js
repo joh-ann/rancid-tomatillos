@@ -12,6 +12,36 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
       </div>
     ));
 
+    // rating icon
+    let ratingIcon;
+    if (movie.average_rating >= 5) {
+      ratingIcon = '🍅'
+    } else {
+      ratingIcon = '🦠'
+    }
+
+    // budget & revenue
+    let budgetAmt;
+    let revenueAmt;
+
+    if (movie.budget === 0) {
+      budgetAmt = 'N/A'
+    } else {
+      budgetAmt = `$${movie.budget}`
+    }
+    if (movie.revenue === 0) {
+      revenueAmt = 'N/A'
+    } else {
+      revenueAmt = `$${movie.revenue}`
+    }
+
+    // runtime
+    const totalMins = movie.runtime
+    const hours = Math.floor(totalMins / 60)
+    const remainingMins = totalMins % 60;
+
+    const runTime = `${hours}h ${remainingMins}m`
+
     return (
       <div className="selected-movie">
         <img src={movie.poster_path} className="selected-movie-img" />
@@ -24,18 +54,18 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
           ></iframe>
           <div className="selected-movie-info">
             <div className="selected-movie-title">
-              <h2>{movie.title}</h2>
-              <h3>🍿 {movie.average_rating * 10}%</h3>
+              <h2>{movie.title} - {runTime}</h2>
+              <h3>{ratingIcon} {movie.average_rating * 10}%</h3>
             </div>
             <p className="selected-movie-genres">{movieGenres}</p>
             <p className="selected-movie-stats">
               Release date: {movie.release_date}
               <>&nbsp;</>
               <>&nbsp;</>
-              Budget: ${movie.budget}
+              Budget: {budgetAmt}
               <>&nbsp;</>
               <>&nbsp;</>
-              Revenue: ${movie.revenue}
+              Revenue: {revenueAmt}
             </p>
             <p className="selected-movie-overview">{movie.overview}</p>
           </div>
@@ -62,6 +92,7 @@ FocusMovie.propTypes = {
       genres: PropTypes.array.isRequired,
       budget: PropTypes.number,
       revenue: PropTypes.number,
+      runtime: PropTypes.number,
     })
   ),
   customStyles: PropTypes.object,

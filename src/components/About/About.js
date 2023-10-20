@@ -6,7 +6,7 @@ import hochworter_ann from '../../images/hochworter_ann.jpg';
 function About() {
   return (
     <div className="about-us-container">
-      <div className="about-us-member">
+      <div className="about-us-member johann">
         <img src={dee_johann} className='about-us-picture'/>
         <h2>Johann Dee</h2>
         <div className="bio-container">
@@ -19,7 +19,7 @@ function About() {
         </div>
       </div>
 
-      <div className="about-us-member">
+      <div className="about-us-member ann">
         <img src={hochworter_ann} className='about-us-picture'/>
         <h2>Ann Hochworter</h2>
         <div className="bio-container">
