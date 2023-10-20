@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import Modal from 'react-modal';
-import PropTypes from 'prop-types';
 import { Routes, Route } from 'react-router-dom';
 
 import { useState, useEffect } from 'react';
@@ -12,6 +11,7 @@ import AllMovies from '../AllMovies/AllMovies';
 import FocusMovie from '../FocusMovie/FocusMovie';
 import Footer from '../Footer/Footer';
 import ReactBuilt from '../ReactBuilt/ReactBuilt';
+import { getAllMovies } from '../../apiCalls';
 
 // modal
 const customStyles = {
@@ -47,24 +47,12 @@ function App() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [error, setError] = useState('');
 
-  function getAllMovies() {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-      .then(response => {
-        if (!response.ok) {
-          // console.log(`Error code: ${response.status}`);
-          throw new Error(`Sorry the Movies are not available`);
-        } else {
-          return response.json();
-        }
-      })
+  useEffect(() => {
+    getAllMovies()
       .then(data => {
         setMovies([...allMovies, ...data.movies]);
       })
       .catch(error => setError(error.message));
-  }
-
-  useEffect(() => {
-    getAllMovies();
   }, []);
 
   function errorMessage() {
@@ -113,11 +101,11 @@ function App() {
       })
       .then(data => {
         const foundTrailer = data.videos.find(el => el.type === 'Trailer');
-        console.log(foundTrailer)
+        console.log(foundTrailer);
         if (foundTrailer === undefined) {
-          setTrailerKey('Lesx_Rda5V0') // laid-back camp
+          setTrailerKey('Lesx_Rda5V0'); // laid-back camp
         } else {
-        setTrailerKey(foundTrailer.key);
+          setTrailerKey(foundTrailer.key);
         }
       })
       .catch(error => console.log(error));
