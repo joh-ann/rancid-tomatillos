@@ -111,8 +111,13 @@ function App() {
         return response.json();
       })
       .then(data => {
-        const foundTrailer = data.videos.find(el => el.type === 'Trailer').key;
-        setTrailerKey(foundTrailer);
+        const foundTrailer = data.videos.find(el => el.type === 'Trailer');
+        console.log(foundTrailer)
+        if (foundTrailer === undefined) {
+          setTrailerKey('Lesx_Rda5V0') // laid-back camp
+        } else {
+        setTrailerKey(foundTrailer.key);
+        }
       })
       .catch(error => console.log(error));
   }

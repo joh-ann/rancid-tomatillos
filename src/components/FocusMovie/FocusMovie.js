@@ -42,7 +42,6 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
 
     const runTime = `${hours}h ${remainingMins}m`
 
-
     return (
       <div className="selected-movie">
         <img src={movie.poster_path} className="selected-movie-img" />
