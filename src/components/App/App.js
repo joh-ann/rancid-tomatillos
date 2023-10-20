@@ -28,6 +28,7 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    overflowY: 'auto',
   },
   overlay: {
     background: 'rgba(0, 0, 0, 0.5)',
