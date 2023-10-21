@@ -2,18 +2,15 @@
 ![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/053ecfb6-8c38-411e-85f1-49b4a29f3d48)
 
 
-
 ## Abstract
-Introducing "Rancid Tomatillos," your ultimate movie companion app! With Rancid Tomatillos, you can effortlessly navigate through a curated selection of movies, each accompanied by its rating, title, and year of release. When you discover a movie that piques your interest, a world of cinematic details awaits at your fingertips. A single click opens a cinematic window, unveiling an immersive experience with an in-depth overview of the movie. What's more, you can even enjoy the movie's trailer right from this elegant interface.
+Introducing "Rancid Tomatillos," your ultimate movie companion app! With Rancid Tomatillos, you can effortlessly navigate through a selection of movies, each accompanied by its rating, title, and year of release. When you discover a movie that piques your interest, a world of cinematic details awaits at your fingertips. A single click opens a cinematic window, unveiling an immersive experience with an in-depth overview of the movie. What's more, you can even enjoy the movie's trailer right from this elegant interface.
 
 But that's not all - our search feature takes your movie exploration to the next level. Enter keywords, and Rancid Tomatillos will provide you with an intuitive, visually-rich representation of the search results. From here, you can delve deeper into any movie that captures your imagination with just a tap, accessing all the information you need.
 
 ### Contributors
 
-https://www.linkedin.com/in/annhochworter/
-
-
-
+- [Johann Dee](https://linkedin.com//in/johanndee)
+- [Ann Hochworter](https://linkedin.com/in/AHochworter)
 
 
 ### Tech Stack
@@ -29,8 +26,6 @@ https://www.linkedin.com/in/annhochworter/
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
-
-
 
 
 ### Preview & Demo Clips:
@@ -56,6 +51,11 @@ Screen Shots:
 
 ![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/bb2d0b04-9cdc-4672-a5fe-7eb821fb8cac)
 
+![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/20100b13-d42c-4a3c-bddc-f4c4186480c4)
+
+![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/8f1397a5-887e-4809-87a6-436a22a33af7)
+
+![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/53ab5454-cc8a-4f10-987f-47ff9a9bb393)
 
 
 
