@@ -147,7 +147,7 @@ function App() {
           key={focusMovie.id}
           trailerKey={trailerKey}
         />
-        <button className="close-modal-btn" onClick={closeModal}>
+        <button className="close-modal-btn" onClick={closeModal} tabIndex={0}>
           ×
         </button>
       </Modal>

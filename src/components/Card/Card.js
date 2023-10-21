@@ -15,14 +15,14 @@ function Card({
     ratingIcon = '🦠';
   }
   return (
-    <div className="card" onClick={() => showFocusMovie(id)}>
-      <img src={poster_path} className="movie-card-img" alt={title} />
-      <div className="card-rating">
+    <div className="card" onClick={() => showFocusMovie(id)} tabIndex={0}>
+      <img src={poster_path} className="movie-card-img" alt={title} tabIndex={0}/>
+      <div className="card-rating" tabIndex={0}>
         {ratingIcon} {average_rating * 10}%
       </div>
       <div className="card-description">
-        <h2 className="card-title">{title}</h2>
-        <p className="card-year">{release_date}</p>
+        <h2 className="card-title" tabIndex={0}>{title}</h2>
+        <p className="card-year" tabIndex={0}>{release_date}</p>
       </div>
     </div>
   );
