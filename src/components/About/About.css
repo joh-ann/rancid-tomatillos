@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 100px;
+  height: 60%;
   animation: fadeIn 1.5s forwards;
 }
 
