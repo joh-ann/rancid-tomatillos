@@ -16,6 +16,7 @@
 
 .app {
   background-color: #030e17;
+  min-height: 100vh;
 }
 
 .close-modal-btn {
