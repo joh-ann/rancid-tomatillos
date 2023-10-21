@@ -60,13 +60,13 @@ More Images
 
 <div align="center">
 
-<img width="921" alt="Screenshot 2023-10-21 at 09 59 16" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/f01407be-1f48-4db7-9e2a-b7b11a1e3723">
+<img width="202" alt="Screenshot 2023-10-21 at 10 01 32" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/a82e25ca-1888-42ad-b203-ba06bebfdb09">
 
 <img width="436" alt="Screenshot 2023-10-21 at 10 00 43" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/dc6bc5c7-88b3-4c3b-974f-8e0fec5ee4d0">
 
 <img width="461" alt="Screenshot 2023-10-21 at 10 01 32" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/29946885-bcd5-4a96-bfad-92c0e9406031">
 
-<img width="202" alt="Screenshot 2023-10-21 at 10 01 32" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/a82e25ca-1888-42ad-b203-ba06bebfdb09">
+<img width="871" alt="Screenshot 2023-10-21 at 09 59 16" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/f01407be-1f48-4db7-9e2a-b7b11a1e3723">
 
 </details>
 
