@@ -1,5 +1,5 @@
 export function getAllMovies() {
-  return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movis').then(
+  return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies').then(
     response => {
       if (!response.ok) {
         if (response.status === 404) {
