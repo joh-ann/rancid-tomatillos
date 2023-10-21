@@ -1,6 +1,12 @@
-# Rancid Tomatillos
-![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/053ecfb6-8c38-411e-85f1-49b4a29f3d48)
+<div align="center">
 
+# Rancid Tomatillos
+
+<img width="1361" alt="Screenshot 2023-10-21 at 09 25 23" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/e5ebc4d4-68ec-4020-abe5-04042043aa71">
+
+### [Deployed Link](https://rancid-tomatillos-joh-ann.vercel.app/)
+
+</div>
 
 ## Abstract
 Introducing "Rancid Tomatillos," your ultimate movie companion app! With Rancid Tomatillos, you can effortlessly navigate through a selection of movies, each accompanied by its rating, title, and year of release. When you discover a movie that piques your interest, a world of cinematic details awaits at your fingertips. A single click opens a cinematic window, unveiling an immersive experience with an in-depth overview of the movie. What's more, you can even enjoy the movie's trailer right from this elegant interface.
@@ -28,40 +34,63 @@ But that's not all - our search feature takes your movie exploration to the next
 ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
 
 
-### Preview & Demo Clips:
+### Preview & Demo Clips
 <details>
 <summary>
-Demo Clips:
+Demo Clips
 </summary>
-  
+<div align="center">  
+ 
 ![home-page](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/4817c2b8-7dc4-45cb-ad15-da9633245610)
+Home Page
 
 ![modal-preview-03](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/d6dbaffb-cd59-4a6b-848c-a7493c348cd1)
+Modal
 
 ![responsiveness](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/936beae9-3237-411a-967c-80e3afea82de)
+Responsiveness
 
+</div>
 </details>
 
 <details>
 <summary>
-Screen Shots:
+More Images
 </summary> 
-  
-![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/053ecfb6-8c38-411e-85f1-49b4a29f3d48)
 
-![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/bb2d0b04-9cdc-4672-a5fe-7eb821fb8cac)
+<div align="center">
 
-![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/20100b13-d42c-4a3c-bddc-f4c4186480c4)
+<img width="921" alt="Screenshot 2023-10-21 at 09 59 16" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/f01407be-1f48-4db7-9e2a-b7b11a1e3723">
 
-![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/8f1397a5-887e-4809-87a6-436a22a33af7)
+<img width="446" alt="Screenshot 2023-10-21 at 10 00 43" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/dc6bc5c7-88b3-4c3b-974f-8e0fec5ee4d0">
 
-![image](https://github.com/joh-ann/rancid-tomatillos/assets/125393235/53ab5454-cc8a-4f10-987f-47ff9a9bb393)
+<img width="471" alt="Screenshot 2023-10-21 at 10 01 32" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/29946885-bcd5-4a96-bfad-92c0e9406031">
 
-
+<img width="202" alt="Screenshot 2023-10-21 at 10 01 32" src="https://github.com/joh-ann/rancid-tomatillos/assets/126308696/a82e25ca-1888-42ad-b203-ba06bebfdb09">
 
 </details>
 
+</div>
 
+### Goals
+```
+- Apply object-oriented programming (OOP) principles as the foundation for both the application's architecture and codebase
+- Work with an external API to receive data
+- Create a multi-page UX using Router
+- Design a modern, user-friendly and responsive website
+- Maintain well-structured code with minimal redundancy
+- Pay special attention to accessibility and usability across various devices, ensuring a perfect 100% score in Lighthouse's accessibility audit
+```
+
+### User Stories
+```
+Users should be able to:
+- Visit the app, all movies should be displayed
+- Click a movie, and see that movie's details
+- Return to the main view of all movies
+- Be able to search for a specific movie
+- See errors if there are server errors
+```
 
 
 
