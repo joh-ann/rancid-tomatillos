@@ -11,11 +11,12 @@
   background-color: #030e17;
   padding: 40px 0px 40px 0px;
   animation: fadeIn 2s forwards;
-  min-height: 80vh;
+  min-height: 80%;
 }
 
 .app {
   background-color: #030e17;
+  min-height: 100vh;
 }
 
 .close-modal-btn {
@@ -40,7 +41,9 @@
 
 .error-message {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 2em;
+  text-align: center;
+  min-height: 80vh;
 }
 
 .ReactModal__Overlay {

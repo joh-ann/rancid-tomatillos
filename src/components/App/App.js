@@ -22,8 +22,8 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     border: 'none',
-    height: '80%',
-    width: '80%',
+    height: '82%',
+    width: '82%',
     overflow: 'hidden',
     transform: 'translate(-50%, -50%)',
     backgroundSize: 'cover',
@@ -147,7 +147,7 @@ function App() {
           key={focusMovie.id}
           trailerKey={trailerKey}
         />
-        <button className="close-modal-btn" onClick={closeModal}>
+        <button className="close-modal-btn" onClick={closeModal} tabIndex={0}>
           ×
         </button>
       </Modal>

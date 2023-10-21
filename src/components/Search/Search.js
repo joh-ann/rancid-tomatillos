@@ -19,7 +19,7 @@ function Search({ allMovies, showFocusMovie, search }) {
           <AllMovies allMovies={searchString} showFocusMovie={showFocusMovie} />
         ) : (
           <div className="empty-search">
-            <p className="empty-search-text">No Movies Found</p>
+            <p className="empty-search-text" tabIndex={0}>No Movies Found</p>
           </div>
         )}
       </div>

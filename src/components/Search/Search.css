@@ -1,13 +1,11 @@
 .search {
   background-color: #030e17;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .empty-search {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 80vw;
 }
 
 .empty-search-text {

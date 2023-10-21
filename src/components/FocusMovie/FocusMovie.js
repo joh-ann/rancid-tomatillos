@@ -48,26 +48,28 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
           src={movie.poster_path}
           className="selected-movie-img"
           alt={movie.title}
+          tabIndex={0}
         />
         <div className="selected-movie-content">
           <iframe
             title="youtube movie trailer"
             className="selected-movie-trailer"
-            width="90%"
+            width="92%"
             height="400px"
             src={`https://www.youtube.com/embed/${trailerKey}`}
           ></iframe>
           <div className="selected-movie-info">
-            <div className="selected-movie-title">
-              <h2>
-                {movie.title} - {runTime}
+            <div className="selected-movie-title-wrapper">
+              <h2 className="selected-movie-title" tabIndex={0}>
+                {movie.title}
               </h2>
-              <h3>
-                {ratingIcon} {movie.average_rating * 10}%
+              <h3 tabIndex={0}>
+              {runTime} <>&nbsp;</> {ratingIcon} {movie.average_rating * 10}%
               </h3>
             </div>
-            <p className="selected-movie-genres">{movieGenres}</p>
-            <p className="selected-movie-stats">
+            <p className="selected-movie-genres" tabIndex={0}>{movieGenres}</p>
+            <p className="selected-movie-overview" tabIndex={0}>{movie.overview}</p>
+            <p className="selected-movie-stats" tabIndex={0}>
               Release date: {movie.release_date}
               <>&nbsp;</>
               <>&nbsp;</>
@@ -76,7 +78,6 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
               <>&nbsp;</>
               Revenue: {revenueAmt}
             </p>
-            <p className="selected-movie-overview">{movie.overview}</p>
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 100px;
+  min-height: 80vh;
   animation: fadeIn 1.5s forwards;
 }
 
@@ -11,7 +12,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* width: 450px; */
   font-size: 1em;
   color: #FFFFFF;
 }
