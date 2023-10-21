@@ -40,7 +40,9 @@
 
 .error-message {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 2em;
+  text-align: center;
+  min-height: 80vh;
 }
 
 .ReactModal__Overlay {

@@ -1,12 +1,12 @@
 export function getAllMovies() {
-  return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies').then(
+  return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movis').then(
     response => {
       if (!response.ok) {
         if (response.status === 404) {
-          throw new Error('Sorry, the movies were not found.');
+          throw new Error('Sorry, no movies were not found.');
         } else if (response.status === 500) {
           throw new Error(
-            'Oops, something went wrong on our server. Please try again later.'
+            'Oops! Something went wrong on our server. Please try again later.'
           );
         } else {
           throw new Error('An error occurred while fetching movies.');
