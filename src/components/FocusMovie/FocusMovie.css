@@ -1,11 +1,12 @@
 .selected-movie {
   display: flex;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
 .selected-movie-img {
-  height: 100%;
+  height: 80%;
   width: 30%;
   max-width: 40%;
   border-radius: 5px;
@@ -13,7 +14,7 @@
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.8));
   display: flex;
   justify-content: center;
-  margin-left: 40px;
+  margin: 10px 20px 10px 20px;
   align-self: center;
 }
 
@@ -29,7 +30,7 @@
 .selected-movie-trailer {
   border-radius: 5px;
   border: none;
-  min-height: 300px;
+  min-height: 50%;
   margin: 10px;
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.8));
 }
@@ -45,14 +46,14 @@
   flex-direction: column;
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.7);
-  max-width: 84%;
+  max-width: 86%;
   position: relative;
   padding: 25px;
   font-size: 1em;
   border-radius: 5px;
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.8));
   overflow-y: auto;
-  min-height: 150px;
+  min-height: 40%;
 }
 
 .selected-movie-genres {

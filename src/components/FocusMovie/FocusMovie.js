@@ -53,8 +53,8 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
           <iframe
             title="youtube movie trailer"
             className="selected-movie-trailer"
-            width="90%"
-            height="400px"
+            width="92%"
+            height="500px"
             src={`https://www.youtube.com/embed/${trailerKey}`}
           ></iframe>
           <div className="selected-movie-info">
