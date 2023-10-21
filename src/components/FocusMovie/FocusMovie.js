@@ -54,12 +54,12 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
             title="youtube movie trailer"
             className="selected-movie-trailer"
             width="92%"
-            height="500px"
+            height="400px"
             src={`https://www.youtube.com/embed/${trailerKey}`}
           ></iframe>
           <div className="selected-movie-info">
-            <div className="selected-movie-title">
-              <h2>
+            <div className="selected-movie-title-wrapper">
+              <h2 className="selected-movie-title">
                 {movie.title}
               </h2>
               <h3>
@@ -67,6 +67,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
               </h3>
             </div>
             <p className="selected-movie-genres">{movieGenres}</p>
+            <p className="selected-movie-overview">{movie.overview}</p>
             <p className="selected-movie-stats">
               Release date: {movie.release_date}
               <>&nbsp;</>
@@ -76,7 +77,6 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
               <>&nbsp;</>
               Revenue: {revenueAmt}
             </p>
-            <p className="selected-movie-overview">{movie.overview}</p>
           </div>
         </div>
       </div>

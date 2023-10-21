@@ -34,10 +34,14 @@
   filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.8));
 }
 
-.selected-movie-title {
+.selected-movie-title-wrapper {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: space-between;
+}
+
+.selected-movie-title {
+  font-size: 1.3em;
 }
 
 .selected-movie-info {
