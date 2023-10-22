@@ -67,7 +67,7 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
                 <h3 class="selected-movie-runtime" tabIndex={0}>
                 {runTime} 
                 </h3>
-                <h3 class="selected-movie-runtime" tabIndex={0}>
+                <h3 className="selected-movie-rating" tabIndex={0}>
                 {ratingIcon} {movie.average_rating * 10}% 
                 </h3>
               </div>
