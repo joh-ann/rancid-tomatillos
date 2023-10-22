@@ -63,9 +63,14 @@ function FocusMovie({ focusMovie, customStyles, trailerKey }) {
               <h2 className="selected-movie-title" tabIndex={0}>
                 {movie.title}
               </h2>
-              <h3 tabIndex={0}>
-              {runTime} <>&nbsp;</> {ratingIcon} {movie.average_rating * 10}%
-              </h3>
+              <div className='selected-movie-rr-container'>
+                <h3 class="selected-movie-runtime" tabIndex={0}>
+                {runTime} 
+                </h3>
+                <h3 className="selected-movie-rating" tabIndex={0}>
+                {ratingIcon} {movie.average_rating * 10}% 
+                </h3>
+              </div>
             </div>
             <p className="selected-movie-genres" tabIndex={0}>{movieGenres}</p>
             <p className="selected-movie-overview" tabIndex={0}>{movie.overview}</p>
