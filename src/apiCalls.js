@@ -3,7 +3,7 @@ export function getAllMovies() {
     response => {
       if (!response.ok) {
         if (response.status === 404) {
-          throw new Error('Sorry, no movies were not found.');
+          throw new Error('Sorry, no movies were found.');
         } else if (response.status === 500) {
           throw new Error(
             'Oops! Something went wrong on our server. Please try again later.'

@@ -17,7 +17,7 @@ describe('About page elements', () => {
       .contains('Johann Dee')
       .get('p')
       .contains('Ann')
-      .get("div[class='about-us-member']")
+      .get("div[class='about-us-member ann']")
       .find('img')
       .should('be.visible')
       .get('.subtitle')
