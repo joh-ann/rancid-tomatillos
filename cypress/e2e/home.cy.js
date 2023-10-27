@@ -19,9 +19,11 @@ describe('should open to home page', () => {
         fixture: 'moviedata',
       }
     )
+      .as('getMovies')
       .visit('http://localhost:3000')
+      .wait('@getMovies')
       .get('.error-message')
-      .contains('Sorry, the movies were not found.');
+      .contains('Sorry, no movies were found.');
   });
 
   it('should display an error message', () => {
@@ -33,10 +35,12 @@ describe('should open to home page', () => {
         fixture: 'moviedata',
       }
     )
+      .as('getMovies')
       .visit('http://localhost:3000')
+      .wait('@getMovies')
       .get('.error-message')
       .contains(
-        'Oops, something went wrong on our server. Please try again later.'
+        'Oops! Something went wrong on our server. Please try again later.'
       );
   });
 
