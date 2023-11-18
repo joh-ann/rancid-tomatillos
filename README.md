@@ -6,12 +6,13 @@
 
 </div>
 
-![Rancid Tomatillos](https://github.com/joh-ann/rancid-tomatillos/assets/126308696/e5ebc4d4-68ec-4020-abe5-04042043aa71)
-
 ### Overview
 Introducing "Rancid Tomatillos," your ultimate movie companion app! With Rancid Tomatillos, you can effortlessly navigate through a selection of movies, each accompanied by its rating, title, and year of release. When you discover a movie that piques your interest, a world of cinematic details awaits at your fingertips. A single click opens a cinematic window, unveiling an immersive experience with an in-depth overview of the movie. What's more, you can even enjoy the movie's trailer right from this elegant interface.
 
 But that's not all - our search feature takes your movie exploration to the next level. Enter keywords, and Rancid Tomatillos will provide you with an intuitive, visually-rich representation of the search results. From here, you can delve deeper into any movie that captures your imagination with just a tap, accessing all the information you need.
+
+### Preview
+![Rancid Tomatillos](https://github.com/joh-ann/rancid-tomatillos/assets/126308696/e5ebc4d4-68ec-4020-abe5-04042043aa71)
 
 ### Tech Stack
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
